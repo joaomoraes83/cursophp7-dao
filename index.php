@@ -23,12 +23,22 @@ echo json_encode($usuarios);
 //echo json_encode($search);
 
 //CARREGA UM USUARIO USANDO LOGIN E SENHA
+//$usuario = new Usuario();
+//$usuario->login("Selma","54321");
+//echo $usuario;
+
+//INSERE UM USUARIO O BANCO DE DADOS
+//$aluno = new Usuario("aluno", "0254187");
+//$aluno->insert();
+//echo $aluno;
+
+//ALTERA UM USUARIO NO BANCO DE DADOS
 $usuario = new Usuario();
-$usuario->login("Selma","54321");
+
+$usuario->loadById(12);
+
+$usuario->update("luna", "2007");
+
 echo $usuario;
-
-
-
-
 
 ?>
