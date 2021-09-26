@@ -33,12 +33,16 @@ echo json_encode($usuarios);
 //echo $aluno;
 
 //ALTERA UM USUARIO NO BANCO DE DADOS
+//$usuario = new Usuario();
+//$usuario->loadById(12);
+//$usuario->update("luna", "2007");
+//echo $usuario;
+
+//DELETAR UM USUARIO NO BANCO DE DADOS
 $usuario = new Usuario();
-
-$usuario->loadById(12);
-
-$usuario->update("luna", "2007");
-
+$usuario->loadById(10);
+$usuario->delete();
 echo $usuario;
+
 
 ?>
